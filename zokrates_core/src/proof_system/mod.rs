@@ -40,9 +40,9 @@ impl SolidityAbi {
 
 #[derive(Serialize, Deserialize)]
 pub struct Proof<T> {
-    proof: T,
-    inputs: Vec<String>,
-    raw: String,
+    pub proof: T,
+    pub inputs: Vec<String>,
+    pub raw: String,
 }
 
 impl<T: Serialize + DeserializeOwned> Proof<T> {
