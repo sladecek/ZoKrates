@@ -35,7 +35,7 @@ impl ProofPoints {
         }
     }
 
-    pub fn from_bellman<T: Field>(proof: &BellmanProof<T::BellmanEngine> ) -> Self {
+    pub fn from_bellman<T: Field>(proof: &BellmanProof<T::BellmanEngine>) -> Self {
         ProofPoints {
             a: parse_g1::<T>(&proof.a),
             b: parse_g2::<T>(&proof.b),
