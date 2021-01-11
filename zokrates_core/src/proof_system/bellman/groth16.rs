@@ -21,9 +21,9 @@ pub struct G16 {}
 
 #[derive(Serialize, Deserialize)]
 pub struct ProofPoints {
-    a: G1Affine,
-    b: G2Affine,
-    c: G1Affine,
+    pub a: G1Affine,
+    pub b: G2Affine,
+    pub c: G1Affine,
 }
 
 impl ProofPoints {
