@@ -38,7 +38,7 @@ impl SolidityAbi {
     }
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Clone)]
 pub struct Proof<T> {
     pub proof: T,
     pub inputs: Vec<String>,
@@ -68,6 +68,7 @@ impl ToString for G2Affine {
         format!("[{}], [{}]", self.0.to_string(), self.1.to_string())
     }
 }
+
 
 pub trait ProofSystem<T: Field>
 where
